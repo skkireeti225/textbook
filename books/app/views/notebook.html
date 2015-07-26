@@ -1,0 +1,45 @@
+<div class="row">
+   <div class="col-md-10 col-md-offset-1 wraper">
+   
+   <div ng-if="guruObj.workbenches.length !== 0">
+         <div class="container" style="margin-top: 20px; border:'1px solid black'">
+            <div class="row workbench pull-left">
+               <div class="col-md-4 btn-group btn-group-m">
+                  <button  type="button" class="btn btn-default backbtn" ng-click="back('workbench')"></button>  
+               </div>
+            </div>
+    </div>
+   
+   
+         <div  style="margin-top: 20px; border:'1px solid black'">
+         <div class="table-responsive panel" >
+         <div class="panel-heading">
+         <h3 class="panel-title" >
+				Notebooks
+		 </h3>
+         </div> 
+            <table class="table table-striped">
+               <tbody>
+                  <tr ng-repeat="person in guruObj.notebooks">
+                     <td>{{person.Notebook}}</td>
+                  <!--    <td> <button  type="button" class="pull-right schbtn" ng-click="openDialog()" ><span class="glyphicons glyphicons-option-vertical"></span></button>  </td> -->
+              
+		           <td>
+		           <div class="btn-group pull-right">
+				      <button type="button" class="btn dropdown-toggle  schbtn " data-toggle="dropdown">
+				     <span class="glyphicon glyphicon-option-vertical"></span></button>
+				      <ul class="dropdown-menu" role="menu">
+				      <li><a  ng-click="schedular()">Scheduler</a></li>
+				      <li><a href="#"></a></li>
+				          </ul>
+				    </div>
+				    </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         </div>
+      </div>
+   </div>
+   
+</div>

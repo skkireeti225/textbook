@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<div class="p20">
+   <div class="mod">
+      <h2>Create a Workspace</h2>
+      <form role="form">
+         <div class="form-group">
+            <label for="name">Workspace Name</label>
+            <input type="text" class="form-control" id="email" placeholder="Workspace name" ng-model="data.name">
+         </div>
+         <div class="form-group">
+            <label for="cluster">Number of clusters</label>
+            <input type="number" class="form-control" id="pwd" value="2" disabled ng-model="data.clusterSize">
+         </div>
+         <div class="form-group">
+            <label for="comment">Description:</label>
+            <textarea class="form-control" rows="2" id="comment" ng-model="data.description"></textarea>
+         </div>
+         <button type="submit" class="btn btn-default"  ng-click="ok()">Submit</button>
+         <button type="button" class="btn btn-default"  ng-click="cancel()">cancel</button>
+      </form>
+   </div>
+</div>

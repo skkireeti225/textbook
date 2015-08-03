@@ -4,10 +4,10 @@ guruApp.controller("MainCtrl", ['$scope', '$state', '$modal', '$http','$sce',  f
    
    $scope.go = function (state) {
        $state.go(state);
-   }
+   };
    $scope.back = function (state) {
        $state.go(state);
-   }
+   };
   
    guruObj.notebooks =
    [{
@@ -96,16 +96,16 @@ guruApp.controller("MainCtrl", ['$scope', '$state', '$modal', '$http','$sce',  f
 	   var success = function(){
 		   
 		   console.log($scope.data);  
-	   }
+	   };
 	   
 	   var failure = function(){
 		   
 		   console.log('Modal dismissed at: ' + new Date());
-	   }
+	   };
 	   
 	   $scope.openDialog(tempelateurl, ModalInstanceCtrl, success, failure);
 	      
-   }
+   };
    
    
    $scope.schedular = function(){
@@ -117,17 +117,17 @@ guruApp.controller("MainCtrl", ['$scope', '$state', '$modal', '$http','$sce',  f
 	   var success = function(){
 		   
 		   console.log($scope.data);  
-	   }
+	   };
 	   
 	   var failure = function(){
 		   
 		   console.log('Modal dismissed at: ' + new Date());
-	   }
+	   };
 	   
 	   $scope.openDialog(tempelateurl, ModalInstanceCtrl,  success, failure);
 	   
 	   
-   }
+   };
    
 
      
@@ -140,7 +140,7 @@ guruApp.controller("MainCtrl", ['$scope', '$state', '$modal', '$http','$sce',  f
 	    		time:'',
 	    		date:'',
 	    		repeat:''	
-	    }
+	    };
 	    
 	 var modalInstance = $modal.open({
 	        templateUrl:tempelateurl,
@@ -148,11 +148,11 @@ guruApp.controller("MainCtrl", ['$scope', '$state', '$modal', '$http','$sce',  f
 	        size:'sm',
 	        resolve: {
 	        	pData: function()  {
-	        		return $scope.data
+	        		return $scope.data;
 	        	}
 	          }
 	        
-	      });
+	      }); 
 
 	    
 	      modalInstance.result.then(function () {
@@ -164,4 +164,4 @@ guruApp.controller("MainCtrl", ['$scope', '$state', '$modal', '$http','$sce',  f
 	    
 
 	 
-}])
+}]);

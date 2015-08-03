@@ -14,7 +14,7 @@ guruApp.config(function($stateProvider, $urlRouterProvider) {
         .state('notebook', {
             url: '',
             templateUrl: 'app/views/notebook.html'
-        })
+        });
         
         
 });

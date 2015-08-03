@@ -7,8 +7,8 @@ guruApp.service('ModelService', function(){
     		         headers: {
     		           'Content-Type': undefined
     		         },
-    		         bdata: bdata
-    		    }
+    		         bdata: data
+    		    };
     		     
     		      $http(req).success(function(){}).error(function(){});
     	   };

@@ -12,13 +12,25 @@ module.exports = function(grunt) {
       dest: 'dist/built.js'
     }
   },
-    uglify: {
+   /* uglify: {
       dist: {
         files: {
           'dist/built.min.js': ['dist/built.js']  
         }
       }
-    },
+    }, */
+     uglify: { 
+      
+        minjs1: {
+                src: ['dist/built.js'],
+                dest: 'dist/built.min.js'
+            },
+        minjs2: {
+            src: [''],
+            dest: ''
+        }
+         
+      },
    /* uglify: {
         js: {
         dist: { 
@@ -30,6 +42,24 @@ module.exports = function(grunt) {
               }
             }
     }, */
+    cssmin :{
+        
+        stylemin:{      
+                src: ['app/styles/homeStyle.css'],
+                dest: 'dist/built.min.css'
+        }
+    }, 
+      
+    karma: {
+            unit : {
+                configFile : './test/karma.conf.js',
+                autoWatch : false,
+                singleRun : true
+            }
+    },
+        
+        
+      
     jshint: {
     options: {
       curly: true,
@@ -60,10 +90,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-karma');
    
-      grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+      grunt.registerTask('default', ['jshint', 'concat', 'uglify:minjs1', 'cssmin' ]);
+    
     // grunt.registerTask('concatfiles', ['concat']);
     // grunt.registerTask('uglifyfiles', ['uglify']);
+       grunt.registerTask('test:unit', ['karma:unit']);
+    // grunt.registerTask('uglify123js', ['uglify:minjs1', 'uglify:minjs2', 'uglify:minjs1']);
+    
 
 };
 

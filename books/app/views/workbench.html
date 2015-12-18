@@ -1,23 +1,23 @@
 <div class="row">
    <div class="col-md-10 col-md-offset-1">
-     
+
       <div ng-if="guruObj.workbenches.length !== 0">
          <div class="container" style="margin-top: 20px; border:'1px solid black'">
             <div class="row workbench">
                <div class="col-md-4 btn-group btn-group-m pull-right">
-                  <button  type="button" class="btn btn-default" ng-click="workbenchDia()"> ADD</button>  
-                  <button  type="button" class="btn btn-default" >DELETE</button>  
-                  <button  type="button" class="btn btn-default" >DETAILS</button>             
+                  <button  type="button" class="btn btn-default" ng-click="workbenchDia()"> ADD</button>
+                  <button  type="button" class="btn btn-default" ng-click="workbenchDia()">DELETE</button>
+                  <button  type="button" class="btn btn-default" ng-click="workbenchDia()">DETAILS</button>             
                </div>
             </div>
          </div>
-       
+
          <div class="table-responsive panel" >
          <div class="panel-heading">
          <h3 class="panel-title" >
 				workbenches
 		 </h3>
-         </div> 
+         </div>
             <table class="table table-bordered">
                <thead>
                   <tr >
@@ -31,7 +31,7 @@
                </thead>
                <tbody>
                   <tr ng-repeat="person in guruObj.workbenches">
-                  
+
                      <td><input type="radio" name="selection" /> </td>
                      <td ng-click="go('notebook')"><a>{{person.Name}}<a></td>
                      <td>{{person.description}}</td>
@@ -42,8 +42,8 @@
                </tbody>
             </table>
          </div>
-      
+
       </div>
    </div>
-   
+
 </div>
